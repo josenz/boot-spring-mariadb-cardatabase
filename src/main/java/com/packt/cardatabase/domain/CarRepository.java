@@ -53,16 +53,16 @@ public interface CarRepository extends CrudRepository <Car, Long> {
         // @Query("select c from Car c where c.brand like %?1")
         // List<Car> findByBrandEndsWith(String brand);
 
-    // Spring Data JPA also provides 'PagingAndSortingRepository', which extends
-    //  'CrudRepository'. This offers methods to fetch entities using pagination 
-    //  sorting. This is a good option if you are dealing with larger amounts of
-    //  data. 'PagingAndSortingRepository' can be created in a similar way to how
-    // we created 'CrudRepository':
+    // Spring Data JPA also provides 'PagingAndSortingRepository', which 
+    // extends 'CrudRepository'. This offers methods to fetch entities 
+    // using pagination sorting. This is a good option if you are dealing 
+    // with larger amounts of data. 'PagingAndSortingRepository' can be 
+    // created in a similar way to how we created 'CrudRepository':
 
-        // package com.packt.cardatabase.domain;
-        // import org.springframeword.data.repository.PagingAndSortingRepository;
-        // public interface CardRepository extends 
-        // PagingAndSortingRepository<Car, Long> {
+    // package com.packt.cardatabase.domain;
+    // import org.springframeword.data.repository.PagingAndSortingRepository;
+    // public interface CardRepository extends 
+    // PagingAndSortingRepository<Car, Long> {
 
-        // }
+    // }
 }
