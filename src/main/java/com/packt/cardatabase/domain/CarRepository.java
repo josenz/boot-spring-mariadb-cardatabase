@@ -6,10 +6,12 @@ import java.util.List;
 
 public interface CarRepository extends CrudRepository <Car, Long> {
     // Our 'CarRepository' now extends the Spring Boot JPA 'CrudRepository' 
-    // interface. The <Car, Long> type arguments define that this is the repository for |
-    // the 'Car' entity class and the type of the ID field is 'Long'.
+    // interface. The <Car, Long> type arguments define that this is the 
+    // repository for the 'Car' entity class and the type of the ID field is 
+    // 'Long'.
 
-    // 'CrudRepository' provides multiple CRUD methods that we can now start to use.
+    // 'CrudRepository' provides multiple CRUD methods that we can now start 
+    // to use.
     
     // Fetch cars by brand
     List<Car> findByBrand(String brand);
@@ -29,13 +31,15 @@ public interface CarRepository extends CrudRepository <Car, Long> {
         // Fetch cars by brand or color
         // List<Car> findByBrandAndModel(String brand, String color);
 
-    // Queries can be sorted by using the 'OrderBy' keyword in the query method:
+    // Queries can be sorted by using the 'OrderBy' keyword in the query 
+    // method:
 
         // Fetch cars by brand and sort by year
         // List<Car> findByBrandOrderByYearAsc(String brand);
 
-    // You can also create queries by using SQL statements via the @Query annotation.
-    // The following example shows the usage of s SQL query in CrudRepository:
+    // You can also create queries by using SQL statements via the @Query 
+    // annotation. The following example shows the usage of s SQL query in 
+    // CrudRepository:
 
         // Fetch cars by brand using SQL
         // @Query("select c from Car c where c.brand = ?1")
@@ -57,7 +61,8 @@ public interface CarRepository extends CrudRepository <Car, Long> {
 
         // package com.packt.cardatabase.domain;
         // import org.springframeword.data.repository.PagingAndSortingRepository;
-        // public interface CardRepository extends PagingAndSortingRepository<Car, Long> {
+        // public interface CardRepository extends 
+        // PagingAndSortingRepository<Car, Long> {
 
         // }
 }
