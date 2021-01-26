@@ -5,9 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface CarRepository extends CrudRepository <Car, Long> {
-    // Our 'CarRepository' now extends the Spring Boot JPA 'CrudRepository' interface.
-    // The <Car, Long> type arguments define that this is the repository for the 'Car'
-    // entity class and the type of the ID field is 'Long'.
+    // Our 'CarRepository' now extends the Spring Boot JPA 'CrudRepository' 
+    // interface. The <Car, Long> type arguments define that this is the repository for |
+    // the 'Car' entity class and the type of the ID field is 'Long'.
 
     // 'CrudRepository' provides multiple CRUD methods that we can now start to use.
     

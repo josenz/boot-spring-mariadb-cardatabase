@@ -11,17 +11,19 @@ import com.packt.cardatabase.domain.CarRepository;
 
 @SpringBootApplication
 public class CardatabaseApplication {
+
+	// Next, we have to inject our car repository into the main class to be 
+	//   able to save new 'car' objects to the database. An '@Autowired' 
+	//   annotation is used to enable dependency injection. The dependency
+	//   injection allows us to pass dependencies into an object.
+
 	@Autowired
 	private CarRepository repository;
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
 	}
 
-	// Next, we have to inject our car repository into the main class to be 
-	//   able to save new 'car' objects to the database. An '@Autowired' 
-	//   annotation is used to enable dependency injection. The dependency
-	//   injection allows us to pass dependencies into an object. After we 
-	//   we have injected the repository class, we can use the CRUD methods
+	 // After we injected the repository class, we can use the CRUD methods
 	//   it provides. The following sample code shows how to insert a few cars
 	//   to the database:
 
