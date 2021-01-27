@@ -29,7 +29,12 @@ public class Owner {
     @OnetoMany(cascade = CascadeType.ALL, mappedBy="owner")
     private List<Car> cars;
 
-    
+    // The @OneToMany annotation has two attributes that we are using.
+    // The 'cascade' attribute defines how cascading affects the entities.
+    // The 'all' attribute setting means that, if the owner is deleted, the 
+    // cars linked to that owner are deleted as well. The 'mappedBy="owner"'
+    // attribute setting tells us that the 'car' class has the owner field,
+    // which is the foreign key for this relationship.
 
     public Owner() {}
 
