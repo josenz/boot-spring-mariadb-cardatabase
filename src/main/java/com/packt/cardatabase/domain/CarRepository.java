@@ -29,7 +29,7 @@ public interface CarRepository extends CrudRepository <Car, Long> {
         // List<Car> findByBrandAndModel(String brand, String model);
 
         // Fetch cars by brand or color
-        // List<Car> findByBrandAndModel(String brand, String color);
+        // List<Car> findByBrandOrColor(String brand, String color);
 
     // Queries can be sorted by using the 'OrderBy' keyword in the query 
     // method:
@@ -53,6 +53,7 @@ public interface CarRepository extends CrudRepository <Car, Long> {
         // @Query("select c from Car c where c.brand like %?1")
         // List<Car> findByBrandEndsWith(String brand);
 
+        
     // Spring Data JPA also provides 'PagingAndSortingRepository', which 
     // extends 'CrudRepository'. This offers methods to fetch entities 
     // using pagination sorting. This is a good option if you are dealing 

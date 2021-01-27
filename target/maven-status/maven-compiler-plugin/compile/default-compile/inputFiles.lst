@@ -1,3 +1,5 @@
 /Users/jose/code/Java-SpringBoot/cardatabase/src/main/java/com/packt/cardatabase/domain/CarRepository.java
 /Users/jose/code/Java-SpringBoot/cardatabase/src/main/java/com/packt/cardatabase/domain/Car.java
+/Users/jose/code/Java-SpringBoot/cardatabase/src/main/java/com/packt/cardatabase/domain/Owner.java
 /Users/jose/code/Java-SpringBoot/cardatabase/src/main/java/com/packt/cardatabase/CardatabaseApplication.java
+/Users/jose/code/Java-SpringBoot/cardatabase/src/main/java/com/packt/cardatabase/domain/OwnerRepository.java
