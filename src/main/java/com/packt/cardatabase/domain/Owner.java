@@ -1,5 +1,14 @@
+// First, we created the 'Owner' entity and repository
+//  in the 'domain' package. The 'Owner' entity and 
+//  repository are created in a similar way to the 'Car'
+//  class. The following is the source code of the 'owner'
+//  entity class.
+
 package com.packt.cardatabase.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +20,16 @@ public class Owner {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long ownerid;
     private String firstname, lastname;
+
+    // In the owner entity site, the relationship is defined
+    //  with the @OneToMany annotation. The type of the field
+    //  is 'List<Car>', because the owner may have multiple cars.
+    // You can now add the getter and setter for that as follows.
+
+    @OnetoMany(cascade = CascadeType.ALL, mappedBy="owner")
+    private List<Car> cars;
+
+    
 
     public Owner() {}
 
@@ -37,5 +56,14 @@ public class Owner {
     }
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    //Getter and setter
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }
